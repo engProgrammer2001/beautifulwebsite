@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: #fff;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    perspective: 800px;
+}
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height: 400px;
+    width: 400px;
+    background-color: #96c11e60;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 9;
+}
+#nav {
+    height: 100px;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    /* margin-top: 15px; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 100px;
+    gap: 40px;
+    position: fixed;
+    z-index: 99;
+
+}
+
+#nav img {
+    height: 70px;
+
+}
+
+#nav h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+video {
+    height: 100vh;
+    width: 100%;
+    /* right: 0;
+    bottom: 0; */
+    z-index: -1;
+    object-fit: cover;
+    position: fixed;
+}
+
+#main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1 {
+    font-size: 6rem;
+    line-height: .86;
+    letter-spacing: .02em;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: relative;
+}
+/* this is a code for the h1 design  */
+#page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke: 2px #95c11e;
+    z-index: -1;
+
+}
+#page1 h4 {
+    font-size: 1.5rem;
+    line-height: 1.66;
+    letter-spacing: .02em;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#page1 p{
+    font-size: 20px;
+    font-weight: 200;
+    width: 40%;
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+#scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+
+}
+/* This is code for the scroller remover  */
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#scroller h4{
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 900;
+    margin-right: 10px;
+    -webkit-text-stroke: 1px white;
+    color: black;
+}
+#scroller h4:hover{
+    color: #95c11e;
+    -webkit-text-stroke: 1px #95c11e;
+}
+
+
+@keyframes scroll {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+
+/* About sectio start here  */
+#about-us{
+    height: 60vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    position: relative;
+    z-index: 10;
+    align-items: center;
+    justify-content: space-around;
+    padding:0 55px;
+}
+#about-us img{
+    height: 220px;
+    width: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+#about-us-content{
+    width: 55%;
+    text-align: center;
+}
+#about-us-content h3{
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+#about-us-content p{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 30px;
+}
+#about-us-content #second-para{
+    margin-top: 28px;
+}
+
+/* Card Part here  */
+#card-container{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    /* background-color: red; */
+    gap: 60px;
+}
+.card{
+    width: 25%;
+    height: 80%;
+    /* background-color: black; */
+    border-radius: 20px;
+    background-size:cover ;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.8s;
+}
+.card:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+#card1{
+        background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&fit=1024%2C682&ssl=1);
+}
+#card2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&fit=1024%2C1024&ssl=1);
+}
+#card3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&fit=1024%2C682&ssl=1);
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #95c11e;
+    padding-top: 100px;
+    padding-top: 90px;
+    padding-left: 30px;
+    padding-right: 30px;
+    opacity: 0;
+    transition: all ease 0.8s;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.overlay #para1{
+    margin-bottom: 20px;
+}
+.overlay h3{
+    font-size: 30px;
+    color: #000;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 800;
+}
+.overlay p{
+    color: #000;
+    font-size: 18px;
+}
+#green-div{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom,#039c3d, #95c11e );
+}
+#green-div img{
+    height: 100%;
+    object-fit: cover;
+    width: 15%;
+}
+#green-div h4{
+    width: 45%;
+    font-size: 22px;
+    line-height: 45px;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#page3>p{
+    font-size: 25px;
+    color: white;
+    font-weight: 700;
+    width: 64%;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+#page3 img{
+    position: absolute;
+    height: 50px;
+}
+#page3 #colon1{
+    left: 12%;
+    top: 30%;
+}
+#page3 #colon2{
+    top: 60hjh%;
+    right: 12%;
+}
+#page4{
+    height: 50vh;
+    width: 100%;
+    background-color: red;
+}
